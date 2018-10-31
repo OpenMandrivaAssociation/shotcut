@@ -2,7 +2,7 @@
 
 Name: shotcut
 Version: 17.03
-Release: 1
+Release: 2
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
 Summary: A video editor
 URL: http://shotcut.org/
