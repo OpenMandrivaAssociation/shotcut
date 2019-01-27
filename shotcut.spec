@@ -17,6 +17,7 @@ BuildRequires: cmake(Qt5Qml)
 BuildRequires: cmake(Qt5Quick)
 BuildRequires: cmake(Qt5QuickWidgets)
 BuildRequires: cmake(Qt5Sql)
+BuildRequires: cmake(Qt5WebKit)
 BuildRequires: cmake(Qt5WebKitWidgets)
 BuildRequires: cmake(Qt5WebSockets)
 BuildRequires: cmake(Qt5Widgets)
@@ -33,7 +34,7 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(vpx)
 BuildRequires: qt5-qtquick-private-devel
 BuildRequires: pkgconfig(Qt5WebKitWidgets)
-BuildRequires: pkgconfig(QtWebKit)
+
 
 Requires:	frei0r-plugins
 Requires:	ladspa
