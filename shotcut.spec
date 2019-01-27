@@ -32,6 +32,7 @@ BuildRequires: pkgconfig(Qt5PrintSupport)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(vpx)
 BuildRequires: qt5-qtquick-private-devel
+BuildRequires: pkgconfig(Qt5WebKitWidgets)
 
 Requires:	frei0r-plugins
 Requires:	ladspa
