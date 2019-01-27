@@ -42,11 +42,12 @@ Requires:	qt5-qtquickcontrols-qml
 %description
 A video editor
 
-%prep
-%setup -q
-qmake-qt5 PREFIX=%{_prefix}
 
 %build
+%global optflags %{optflags} -std=gnu++11
+%qmake_qt5 \
+	CONFIG-=c++11 \
+	PREFIX=%{_prefix}
 %make
 
 lrelease-qt5 translations/*.ts
