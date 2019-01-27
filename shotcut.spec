@@ -3,7 +3,7 @@
 Name: shotcut
 Version: 19.01.24
 Release: 1
-Source0: https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
+Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
