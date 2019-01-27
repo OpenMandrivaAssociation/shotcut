@@ -1,8 +1,8 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 17.03
-Release: 2
+Version: 19.01.24
+Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}.tar.gz
 Summary: A video editor
 URL: http://shotcut.org/
