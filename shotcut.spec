@@ -23,6 +23,21 @@ BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Xml)
 BuildRequires: pkgconfig(mlt++)
 BuildRequires: pkgconfig(mlt-framework)
+BuildRequires: qt5-linguist-tools
+BuildRequires: ffmpeg-devel
+BuildRequires: ladspa-devel
+BuildRequires: pkgconfig(frei0r)
+BuildRequires: pkgconfig(Qt5Concurrent)
+BuildRequires: pkgconfig(Qt5PrintSupport)
+BuildRequires: pkgconfig(Qt5X11Extras)
+BuildRequires: pkgconfig(vpx)
+BuildRequires: qt5quick-private-devel
+
+Requires:	frei0r-plugins
+Requires:	ladspa
+Requires:	mlt >= 6.10.0
+Requires:	qt5-qtquickcontrols-qml
+
 
 %description
 A video editor
@@ -34,9 +49,18 @@ qmake-qt5 PREFIX=%{_prefix}
 %build
 %make
 
+lrelease-qt5 translations/*.ts
+
 %install
 %makeinstall INSTALL_ROOT=%{buildroot}
 
+
 %files
-%{_bindir}/shotcut
-%{_datadir}/shotcut
+%doc COPYING README.md
+%{_bindir}/%{name}
+%{_datadir}/%{name}
+%{_datadir}/applications/org.%{name}.Shotcut.desktop
+%{_datadir}/metainfo/org.%{name}.Shotcut.appdata.xml
+%{_datadir}/mime/packages/org.%{name}.Shotcut.xml
+%{_iconsdir}/hicolor/*/apps/org.%{name}.Shotcut.png
+%{_mandir}/man1/%{name}.1*
