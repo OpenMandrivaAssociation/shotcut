@@ -38,7 +38,7 @@ BuildRequires: pkgconfig(Qt5WebKitWidgets)
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qtbase-devel
 BuildRequires: pkgconfig(Qt5Test)
-
+BuildRequires: cmake(Qt5Test)
 
 Requires:	frei0r-plugins
 Requires:	ladspa
