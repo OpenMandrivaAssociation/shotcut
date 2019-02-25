@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 19.01.24
+Version: 19.02.20
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: A video editor
@@ -37,7 +37,7 @@ BuildRequires: qt5-qtquick-private-devel
 BuildRequires: pkgconfig(Qt5WebKitWidgets)
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qtbase-devel
-BuildRequires: pkgconfig(Qt5Test)
+#BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: cmake(Qt5Test)
 
 Requires:	frei0r-plugins
