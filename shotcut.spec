@@ -55,7 +55,7 @@ A video editor
 qmake-qt5 PREFIX=%{_prefix}
 
 %build
-%make
+%make LIBS="-QSignalSpy"
 
 lrelease-qt5 translations/*.ts
 
