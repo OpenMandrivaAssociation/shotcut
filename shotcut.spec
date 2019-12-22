@@ -34,6 +34,7 @@ BuildRequires: pkgconfig(Qt5PrintSupport)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(vpx)
 BuildRequires: qt5-qtquick-private-devel
+BuildRequires: qt5-qtqmlmodels-private-devel
 BuildRequires: pkgconfig(Qt5WebKitWidgets)
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qtbase-devel
