@@ -23,6 +23,7 @@ BuildRequires: cmake(Qt5WebKitWidgets)
 BuildRequires: cmake(Qt5WebSockets)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Xml)
+BuildRequires: cmake(Qt5XkbCommonSupport)
 BuildRequires: pkgconfig(mlt++)
 BuildRequires: pkgconfig(mlt-framework)
 BuildRequires: qt5-linguist-tools
@@ -35,9 +36,11 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(vpx)
 BuildRequires: qt5-qtquick-private-devel
 BuildRequires: qt5-qtqmlmodels-private-devel
+BuildRequires: qt5-qtqml-private-devel
 BuildRequires: pkgconfig(Qt5WebKitWidgets)
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qtbase-devel
+BuildRequires:  pkgconfig(sdl2)
 #BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: cmake(Qt5Test)
 
