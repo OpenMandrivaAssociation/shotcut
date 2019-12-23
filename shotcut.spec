@@ -4,6 +4,7 @@ Name: shotcut
 Version: 19.12.16
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch0: shotcut-19.12.16-find-QSignalSpy.patch
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
@@ -53,20 +54,17 @@ Requires:	qt5-qtquickcontrols-qml
 %description
 A video editor
 
-
 %prep
-%setup -q
+%autosetup -p1
 qmake-qt5 PREFIX=%{_prefix}
 
 %build
-export CC=gcc
-export CXX=g++
-%make LIBS="-QSignalSpy"
+%make
 
-lrelease-qt5 translations/*.ts
+lrelease translations/*.ts
 
 %install
-%makeinstall INSTALL_ROOT=%{buildroot}
+%make_install INSTALL_ROOT=%{buildroot}
 
 
 %files
