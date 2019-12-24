@@ -19,7 +19,7 @@ BuildRequires: cmake(Qt5Quick)
 BuildRequires: cmake(Qt5QuickWidgets)
 BuildRequires: cmake(Qt5Sql)
 BuildRequires: cmake(Qt5Test)
-#BuildRequires: cmake(Qt5WebKit)
+BuildRequires: cmake(Qt5WebKit)
 BuildRequires: cmake(Qt5WebKitWidgets)
 BuildRequires: cmake(Qt5WebSockets)
 BuildRequires: cmake(Qt5Widgets)
@@ -42,14 +42,17 @@ BuildRequires: pkgconfig(Qt5WebKitWidgets)
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qtbase-devel
 BuildRequires:  pkgconfig(sdl2)
-#BuildRequires: pkgconfig(Qt5Test)
-BuildRequires: cmake(Qt5Test)
 
 Requires:	frei0r-plugins
 Requires:	ladspa
+Requires: lame
 Requires:	mlt >= 6.10.0
-Requires:	qt5-qtquickcontrols-qml
-
+Requires:	qt5-qtquickcontrols
+Requires: qt5-qtgraphicaleffects
+Requires: qt5-qtmultimedia
+Recommends: gstreamer1.0-plugins-bad
+Recommends: gstreamer1.0-plugins-good
+Recommends: gstreamer1.0-plugins-ugly
 
 %description
 A video editor
