@@ -5,7 +5,7 @@ Version: 20.09.01
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch0: shotcut-19.12.16-find-QSignalSpy.patch
-#Patch1:	shotcut-20.04.12-qt-5.15.patch
+Patch1:	shotcut-20.09.1-opengles.patch
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
