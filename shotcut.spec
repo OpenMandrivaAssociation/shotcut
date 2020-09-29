@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 20.09.01
+Version: 20.09.27
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch0: shotcut-19.12.16-find-QSignalSpy.patch
