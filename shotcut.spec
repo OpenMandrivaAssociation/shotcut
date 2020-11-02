@@ -1,11 +1,9 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 20.09.27
+Version: 20.10.31
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
-Patch0: shotcut-19.12.16-find-QSignalSpy.patch
-Patch1:	shotcut-20.09.1-opengles.patch
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
