@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 20.10.31
+Version: 20.11.28
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 Summary: A video editor
@@ -14,6 +14,7 @@ BuildRequires: cmake(Qt5Multimedia)
 BuildRequires: cmake(Qt5Network)
 BuildRequires: cmake(Qt5OpenGL)
 BuildRequires: cmake(Qt5Qml)
+BuildRequires: cmake(Qt5QuickControls2)
 BuildRequires: cmake(Qt5Quick)
 BuildRequires: cmake(Qt5QuickWidgets)
 BuildRequires: cmake(Qt5Sql)
