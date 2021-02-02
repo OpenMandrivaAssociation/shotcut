@@ -75,7 +75,7 @@ lrelease translations/*.ts
 %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_datadir}/applications/org.%{name}.Shotcut.desktop
-%{_datadir}/metainfo/org.%{name}.Shotcut.appdata.xml
+%{_datadir}/metainfo/org.%{name}.Shotcut.metainfo.xml
 %{_datadir}/mime/packages/org.%{name}.Shotcut.xml
 %{_iconsdir}/hicolor/*/apps/org.%{name}.Shotcut.png
 %{_mandir}/man1/%{name}.1*
