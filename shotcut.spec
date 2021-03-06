@@ -4,6 +4,7 @@ Name: shotcut
 Version: 21.02.27
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch0:   shotcut-allow-building-with-opengles.patch
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
