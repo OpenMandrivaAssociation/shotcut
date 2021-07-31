@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 21.03.21
+Version: 21.06.29
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 # Fix for building with OpenGL ES. OMV ARM64 use QT compiled with GLES instead desktop OpenGL. So we need force GLES on Shotcut too.
@@ -29,8 +29,8 @@ BuildRequires: cmake(Qt5WebSockets)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Xml)
 BuildRequires: cmake(Qt5XkbCommonSupport)
-BuildRequires: pkgconfig(mlt++)
-BuildRequires: pkgconfig(mlt-framework)
+BuildRequires: pkgconfig(mlt++-7)
+BuildRequires: pkgconfig(mlt-framework-7)
 BuildRequires: qt5-linguist-tools
 BuildRequires: ffmpeg-devel
 BuildRequires: ladspa-devel
