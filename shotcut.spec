@@ -29,8 +29,8 @@ BuildRequires: cmake(Qt5WebSockets)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Xml)
 BuildRequires: cmake(Qt5XkbCommonSupport)
-BuildRequires: pkgconfig(mlt++)
-BuildRequires: pkgconfig(mlt-framework)
+BuildRequires: pkgconfig(mlt++-7)
+BuildRequires: pkgconfig(mlt-framework-7)
 BuildRequires: qt5-linguist-tools
 BuildRequires: ffmpeg-devel
 BuildRequires: ladspa-devel
