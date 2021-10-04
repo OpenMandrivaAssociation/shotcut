@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 21.08.11
+Version: 21.09.20
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 # Fix for building with OpenGL ES. OMV ARM64 use QT compiled with GLES instead desktop OpenGL. So we need force GLES on Shotcut too.
