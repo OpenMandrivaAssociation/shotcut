@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 22.04.25
+Version: 22.06.23
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 # Fix for building with OpenGL ES. OMV ARM64 use QT compiled with GLES instead desktop OpenGL. So we need force GLES on Shotcut too.
@@ -12,6 +12,8 @@ Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
 Group: Graphical desktop/KDE
+
+BuildRequires: cmake
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Multimedia)
@@ -63,15 +65,15 @@ A video editor
 
 %prep
 %autosetup -p1
-qmake-qt5 PREFIX=%{_prefix}
 
 %build
-%make
+%cmake
+%make_build
 
 lrelease translations/*.ts
 
 %install
-%make_install INSTALL_ROOT=%{buildroot}
+%make_install -C build
 
 
 %files
