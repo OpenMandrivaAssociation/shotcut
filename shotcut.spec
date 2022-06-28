@@ -71,8 +71,6 @@ A video editor
 %cmake
 %make_build
 
-lrelease translations/*.ts
-
 %install
 %make_install -C build
 
