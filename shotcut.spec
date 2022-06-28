@@ -36,6 +36,7 @@ BuildRequires: pkgconfig(mlt-framework-7)
 BuildRequires: qt5-linguist-tools
 BuildRequires: ffmpeg-devel
 BuildRequires: ladspa-devel
+BuildRequires: pkgconfig(fftw3)
 BuildRequires: pkgconfig(frei0r)
 BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5PrintSupport)
