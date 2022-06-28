@@ -8,6 +8,7 @@ Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{v
 %ifarch %{arm} %{armx}
 Patch0:   shotcut-allow-building-with-opengles.patch
 %endif
+Patch1:   shotcut-libdir.patch
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
@@ -78,6 +79,7 @@ A video editor
 %files
 %doc COPYING README.md
 %{_bindir}/%{name}
+%{_libdir}/libCuteLogger.so
 %{_datadir}/%{name}
 %{_datadir}/applications/org.%{name}.Shotcut.desktop
 %{_datadir}/metainfo/org.%{name}.Shotcut.metainfo.xml
