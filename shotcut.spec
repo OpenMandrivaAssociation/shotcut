@@ -1,17 +1,20 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 22.04.25
+Version: 22.06.23
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 # Fix for building with OpenGL ES. OMV ARM64 use QT compiled with GLES instead desktop OpenGL. So we need force GLES on Shotcut too.
 %ifarch %{arm} %{armx}
 Patch0:   shotcut-allow-building-with-opengles.patch
 %endif
+Patch1:   shotcut-libdir.patch
 Summary: A video editor
 URL: http://shotcut.org/
 License: GPLv3
 Group: Graphical desktop/KDE
+
+BuildRequires: cmake
 BuildRequires: cmake(Qt5Core)
 BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Multimedia)
@@ -34,6 +37,7 @@ BuildRequires: pkgconfig(mlt-framework-7)
 BuildRequires: qt5-linguist-tools
 BuildRequires: ffmpeg-devel
 BuildRequires: ladspa-devel
+BuildRequires: pkgconfig(fftw3)
 BuildRequires: pkgconfig(frei0r)
 BuildRequires: pkgconfig(Qt5Concurrent)
 BuildRequires: pkgconfig(Qt5PrintSupport)
@@ -63,20 +67,19 @@ A video editor
 
 %prep
 %autosetup -p1
-qmake-qt5 PREFIX=%{_prefix}
 
 %build
-%make
-
-lrelease translations/*.ts
+%cmake
+%make_build
 
 %install
-%make_install INSTALL_ROOT=%{buildroot}
+%make_install -C build
 
 
 %files
 %doc COPYING README.md
 %{_bindir}/%{name}
+%{_libdir}/libCuteLogger.so
 %{_datadir}/%{name}
 %{_datadir}/applications/org.%{name}.Shotcut.desktop
 %{_datadir}/metainfo/org.%{name}.Shotcut.metainfo.xml
