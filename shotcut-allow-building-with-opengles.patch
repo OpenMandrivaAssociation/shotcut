@@ -1,12 +1,12 @@
-diff -uraN shotcut-21.02.27/src/glwidget.cpp omv-shotcut-21.02.27/src/glwidget.cpp
---- shotcut-21.02.27/src/glwidget.cpp	2021-02-27 03:57:47.000000000 +0100
-+++ omv-shotcut-21.02.27/src/glwidget.cpp	2021-03-06 19:31:10.202977336 +0100
-@@ -945,13 +945,24 @@
+diff -uraN shotcut-22.09.23/src/glwidget.cpp omv-shotcut-22.09.23/src/glwidget.cpp
+--- shotcut-22.09.23/src/glwidget.cpp	2022-09-23 22:11:34.000000000 +0200
++++ omv-shotcut-22.09.23/src/glwidget.cpp	2022-09-24 17:34:25.484141819 +0200
+@@ -984,13 +984,24 @@
                  m_imageRequested = false;
                  int imageSizeBytes = width * height * 4;
-                 uchar* image = (uchar*) mlt_pool_alloc(imageSizeBytes);
--                QOpenGLFunctions_1_1* f = m_context->versionFunctions<QOpenGLFunctions_1_1>();
-+               QOpenGLFunctions f(m_context);
+                 uchar *image = (uchar *) mlt_pool_alloc(imageSizeBytes);
+-                QOpenGLFunctions_1_1 *f = m_context->versionFunctions<QOpenGLFunctions_1_1>();
++                QOpenGLFunctions f(m_context);
  
 -                f->glBindTexture(GL_TEXTURE_2D, *textureId);
 -                check_error(f);
@@ -26,7 +26,7 @@ diff -uraN shotcut-21.02.27/src/glwidget.cpp omv-shotcut-21.02.27/src/glwidget.c
 +               f.glReadPixels(0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE, image);
 +               f.glBindFramebuffer(GL_FRAMEBUFFER, 0);
 +               f.glDeleteFramebuffers(1, &fbo);
-+               
++
 +               check_error(&f);
 +               f.glBindTexture(GL_TEXTURE_2D, 0);
  
