@@ -6,7 +6,7 @@ Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 # Fix for building with OpenGL ES. OMV ARM64 use QT compiled with GLES instead desktop OpenGL. So we need force GLES on Shotcut too.
 %ifarch %{arm} %{armx}
-#Patch0:   shotcut-allow-building-with-opengles.patch
+Patch0:   shotcut-allow-building-with-opengles.patch
 %endif
 #Patch1:   shotcut-libdir.patch
 Summary: A video editor
