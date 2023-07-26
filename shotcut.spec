@@ -11,6 +11,7 @@ License: GPLv3
 Group: Graphical desktop/KDE
 
 BuildRequires: cmake
+BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Multimedia)
