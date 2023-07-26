@@ -56,7 +56,7 @@ Requires:	frei0r-plugins
 Requires:	ladspa
 Requires: lame
 Requires:	mlt >= 6.10.0
-Requires:	qt6-qtquickcontrols2
+#Requires:	qt6-qtquickcontrols2
 #Requires: qt5-qtgraphicaleffects
 Requires: qml(QtMultimedia)
 Recommends: gstreamer1.0-plugins-bad
