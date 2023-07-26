@@ -15,6 +15,7 @@ BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Gui)
+BuildRequires: qt6-qttools-linguist
 BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires: cmake(Qt6Multimedia)
 BuildRequires: cmake(Qt6Network)
@@ -72,7 +73,7 @@ A video editor
 %autosetup -p1
 
 %build
-%cmake
+%cmake -DQT_DEBUG_FIND_PACKAGE=ON
 %make_build
 
 %install
