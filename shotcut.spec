@@ -13,6 +13,7 @@ Group: Graphical desktop/KDE
 BuildRequires: cmake
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
+BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Multimedia)
 BuildRequires: cmake(Qt6Network)
@@ -47,6 +48,9 @@ BuildRequires: pkgconfig(vpx)
 #BuildRequires: qt5-qttools
 #BuildRequires: qt5-qtbase-devel
 BuildRequires:  pkgconfig(sdl2)
+BuildRequires:	cmake(VulkanHeaders)
+BuildRequires:	pkgconfig(xkbcommon-x11)
+BuildRequires:	pkgconfig(xkbcommon)
 
 Requires:	frei0r-plugins
 Requires:	ladspa
