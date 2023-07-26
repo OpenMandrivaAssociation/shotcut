@@ -17,15 +17,22 @@ BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: qt6-qttools-linguist
 BuildRequires: cmake(Qt5LinguistTools)
+BuildRequires: qt6-qtmultimedia-gstreamer
 BuildRequires: cmake(Qt6Multimedia)
 BuildRequires: cmake(Qt6Network)
 BuildRequires: cmake(Qt6OpenGL)
 BuildRequires: cmake(Qt6OpenGLWidgets)
 BuildRequires: cmake(Qt6Qml)
+BuildRequires: cmake(Qt6QmlCompilerPrivate)
 BuildRequires: cmake(Qt6QuickControls2)
 BuildRequires: cmake(Qt6Quick)
 BuildRequires: cmake(Qt6QuickWidgets)
 BuildRequires: cmake(Qt6Sql)
+BuildRequires: qt6-qtbase-sql-firebird
+BuildRequires: qt6-qtbase-sql-mariadb
+BuildRequires: qt6-qtbase-sql-odbc
+BuildRequires: qt6-qtbase-sql-postgresql
+BuildRequires: qt6-qtbase-sql-sqlite
 BuildRequires: cmake(Qt6Test)
 #BuildRequires: cmake(Qt5WebKit)
 #BuildRequires: cmake(Qt5WebKitWidgets)
@@ -52,6 +59,7 @@ BuildRequires: pkgconfig(vpx)
 #BuildRequires: qt5-qtbase-devel
 BuildRequires:  pkgconfig(sdl2)
 BuildRequires:	cmake(VulkanHeaders)
+BuildRequires:  pkgconfig(vulkan)
 BuildRequires:	pkgconfig(xkbcommon-x11)
 BuildRequires:	pkgconfig(xkbcommon)
 
@@ -73,7 +81,7 @@ A video editor
 %autosetup -p1
 
 %build
-%cmake -DQT_DEBUG_FIND_PACKAGE=ON
+%cmake
 %make_build
 
 %install
