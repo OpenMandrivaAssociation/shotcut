@@ -27,7 +27,7 @@ BuildRequires: cmake(Qt6Test)
 BuildRequires: cmake(Qt6WebSockets)
 BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6Xml)
-BuildRequires: cmake(Qt6XkbCommonSupport)
+#BuildRequires: cmake(Qt6XkbCommonSupport)
 BuildRequires: pkgconfig(mlt++-7)
 BuildRequires: pkgconfig(mlt-framework-7)
 #BuildRequires: qt5-linguist-tools
