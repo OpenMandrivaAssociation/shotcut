@@ -27,6 +27,7 @@ BuildRequires: cmake(Qt6QuickControls2)
 BuildRequires: cmake(Qt6Quick)
 BuildRequires: cmake(Qt6QuickWidgets)
 BuildRequires: cmake(Qt6Sql)
+BuildRequires: cmake(Qt6Charts)
 BuildRequires: qt6-qtbase-sql-firebird
 BuildRequires: qt6-qtbase-sql-mariadb
 BuildRequires: qt6-qtbase-sql-odbc
