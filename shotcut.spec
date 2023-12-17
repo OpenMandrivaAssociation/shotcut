@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 23.11.29
+Version: 23.12.15
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 
