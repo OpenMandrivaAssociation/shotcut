@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
 Name: shotcut
-Version: 25.08.16
+Version: 25.10.9
 Release: 1
 Source0: https://github.com/mltframework/shotcut/archive/v%{version}/%{name}-%{version}.tar.gz
 
@@ -16,7 +16,7 @@ BuildRequires: cmake(Qt6Core)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Gui)
 BuildRequires: qt6-qttools-linguist
-BuildRequires: cmake(Qt5LinguistTools)
+BuildRequires: cmake(Qt6LinguistTools)
 BuildRequires: qt6-qtmultimedia-gstreamer
 BuildRequires: cmake(Qt6Multimedia)
 BuildRequires: cmake(Qt6Network)
