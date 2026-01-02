@@ -10,6 +10,7 @@ URL: https://shotcut.org/
 License: GPLv3
 Group: Graphical desktop/KDE
 
+BuildRequires: make
 BuildRequires: cmake
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6Core)
