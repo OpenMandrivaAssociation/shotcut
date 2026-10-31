@@ -60,6 +60,9 @@ Requires:	mlt >= 6.10.0
 #Requires:	qt6-qtquickcontrols2
 #Requires: qt5-qtgraphicaleffects
 Requires: qml(QtMultimedia)
+# Registered with qmlRegisterType. The generator rejects the provide
+# because the module URI ends in .qml.
+Provides:	qml(org.shotcut.qml)
 Recommends: gstreamer1.0-plugins-bad
 Recommends: gstreamer1.0-plugins-good
 Recommends: gstreamer1.0-plugins-ugly
